@@ -15,34 +15,42 @@ public class Cliente {
     }
 
     public String getPrimerNombre() {
+
         return primerNombre;
     }
 
     public void setPrimerNombre(String primerNombre) {
+
         this.primerNombre = primerNombre;
     }
 
     public String getPrimerApellido() {
+
         return primerApellido;
     }
 
     public void setPrimerApellido(String primerApellido) {
+
         this.primerApellido = primerApellido;
     }
 
     public String getCodigoCliente() {
+
         return codigoCliente;
     }
 
     public void setCodigoCliente(String codigoCliente) {
+
         this.codigoCliente = codigoCliente;
     }
 
     public String getIdentidad() {
+
         return identidad;
     }
 
     public void setIdentidad(String identidad) {
+
         this.identidad = identidad;
     }
 }
