@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Menu {
     private ArrayList<IMenuItem> items;
-    public int opcion;
+    public int opcion3;
 
 
     public Menu(ArrayList<IMenuItem> items) {

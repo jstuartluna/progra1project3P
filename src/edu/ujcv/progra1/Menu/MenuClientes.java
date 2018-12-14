@@ -52,16 +52,16 @@ public class MenuClientes {
     }
 
     public void eliminarCliente() {
-        clientes1 = LectorCvsCliente.readCsvFile("ClientesLista.Csv");
-        int i = 0;
-        for (Cliente cliente : clientes1) {
-            i++;
-            if (clientes1.size() == i) {
-                clientes1.remove(clientes1.size() - 1);
-                EscritorCvsClientes.writeCsvFile("ClientesLista.Csv", clientes1, false);
-                clientes1.add(new Cliente("\t" , "\t", "\t", "\t"));
+            clientes1 = LectorCvsCliente.readCsvFile("Clientes.csv");
+            int i = 0;
+            for (Cliente cliente:clientes1) {
+                i++;
+                if(clientes1.size()== i){
+                    clientes1.remove(clientes1.size()-1);
+                    EscritorCvsClientes.writeCsvFile("Clientes.Csv",clientes1,false);
+                    clientes1.add(new Cliente("","","",""));
+                }
             }
-        }
     }
 
     public void verClientes() {

@@ -25,10 +25,10 @@ public class EscritorCvsProductos {
             fileWriter = new FileWriter(fileName,append);
 
             //Write the CSV file header
-            //fileWriter.append(FILE_HEADER);
+            fileWriter.append(FILE_HEADER);
 
             //Add a new line separator after the header
-            //fileWriter.append(NEW_LINE_SEPARATOR);
+            fileWriter.append(NEW_LINE_SEPARATOR);
 
             //Write a new student object list to the CSV file
             for (Productos producto : productos) {
