@@ -46,6 +46,7 @@ public class MenuClientes {
         digitardatos.setIdentidad(lt.leerString("Ingrese el numero de identidad del cliente"));
         digitardatos.setPrimerNombre(lt.leerString("Ingrese el Nombre del Cliente"));
         digitardatos.setPrimerApellido(lt.leerString("Ingrese el Primer apellido del Cliente"));
+        clientes1.add(new Cliente(digitardatos.getIdentidad(),digitardatos.getPrimerNombre(),digitardatos.getPrimerApellido(),digitardatos.getCodigoCliente()));
         EscritorCvsClientes.writeCsvFile("ClientesLista.Csv",clientes1);
         return clientes1;
     }

@@ -1,6 +1,7 @@
 package edu.ujcv.progra1.Menu;
 
 import java.util.ArrayList;
+
 import edu.ujcv.progra1.edu.ujcv.progra1.models.Productos;
 import edu.ujcv.progra1.util.LectorTeclado;
 import edu.ujcv.progra1.util.edu.ujcv.progra1.util.fileio.LectorCvsProductos;
@@ -46,6 +47,7 @@ public class MenuProductos {
         digitardatos.setPrecioProducto(lt.leerString("Ingrese el precio del producto"));
         digitardatos.setDescripcionProducto(lt.leerString("Ingrese uns Descripcion del Producto"));
         digitardatos.setCantidadProducto(lt.leerString("Ingrese la cantidad disponible de producto"));
+        productos1.add(new Productos(digitardatos.getCodigoProducto(),digitardatos.getDescripcionProducto(),digitardatos.getCantidadProducto(),digitardatos.getPrecioProducto()));
         EscritorCvsProductos.writeCsvFile("Productos.Csv",productos1);
         return productos1;
     }
@@ -58,8 +60,7 @@ public class MenuProductos {
     public void verProductos(){
         productos1 = LectorCvsProductos.readCsvFile("Productos.csv");
         for (Productos productos : productos1) {
-            System.out.println(productos.getCodigoProducto() + "\t" + productos.getDescripcionProducto() + "\t"
-                    + productos.getPrecioProducto() + "\t" + productos.getCantidadProducto());
+            System.out.println(productos.getCodigoProducto() + "\t" + productos.getDescripcionProducto() + "\t" + productos.getPrecioProducto() + "\t" + productos.getCantidadProducto());
         }
     }
 
