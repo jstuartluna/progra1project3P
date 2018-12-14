@@ -2,13 +2,17 @@ package edu.ujcv.progra1.edu.ujcv.progra1.models;
 
 public class Facturas {
     private String numeroFactura;
-    private String descripcion;
+    private String descripcionProd;
     private String totalFactura;
+    public  String numeroRTN;
+    public String clientes;
 
-    public Facturas( String descripcion, String numeroFactura, String totalFactura) {
+    public Facturas( String descripcionProd, String numeroFactura, String totalFactura, String numeroRTN, String clientes) {
         this.numeroFactura = numeroFactura;
-        this.descripcion = descripcion;
+        this.descripcionProd = descripcionProd;
         this.totalFactura = totalFactura;
+        this.numeroRTN = numeroRTN;
+        this.clientes = clientes;
     }
 
     public String getNumeroFactura() {
@@ -21,14 +25,14 @@ public class Facturas {
         this.numeroFactura = numeroFactura;
     }
 
-    public String getDescripcion() {
+    public String getDescripcionProd() {
 
-        return descripcion;
+        return descripcionProd;
     }
 
-    public void setDescripcion(String descripcion) {
+    public void setDescripcionProd(String descripcion) {
 
-        this.descripcion = descripcion;
+        this.descripcionProd = descripcionProd;
     }
 
     public String getTotalFactura() {
@@ -39,6 +43,26 @@ public class Facturas {
     public void setTotalFactura(String totalFactura) {
 
         this.totalFactura = totalFactura;
+    }
+
+    public String getNumeroRTN() {
+
+        return numeroRTN;
+    }
+
+    public void setNumeroRTN(String numeroRTN) {
+
+        this.numeroRTN = numeroRTN;
+    }
+
+    public String getClientes(){
+
+        return clientes;
+    }
+
+    public void setClientes(String clientes){
+
+        this.clientes = clientes;
     }
 
 }
