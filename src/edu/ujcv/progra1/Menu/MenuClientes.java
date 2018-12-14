@@ -36,27 +36,35 @@ public class MenuClientes {
                 System.out.println("\n");
                 break;
         }
-        return verOpcionesC();
+        return opcion;
     }
 
-    public ArrayList<Cliente> agregarCliente(){
+    public ArrayList<Cliente> agregarCliente() {
         LectorTeclado lt = new LectorTeclado();
         Cliente digitardatos = new Cliente();
         digitardatos.setCodigoCliente(lt.leerString("Ingrese un codigo unico para el cliente"));
         digitardatos.setIdentidad(lt.leerString("Ingrese el numero de identidad del cliente"));
         digitardatos.setPrimerNombre(lt.leerString("Ingrese el Nombre del Cliente"));
         digitardatos.setPrimerApellido(lt.leerString("Ingrese el Primer apellido del Cliente"));
-        clientes1.add(new Cliente(digitardatos.getIdentidad(),digitardatos.getPrimerNombre(),digitardatos.getPrimerApellido(),digitardatos.getCodigoCliente()));
-        EscritorCvsClientes.writeCsvFile("ClientesLista.Csv",clientes1);
+        clientes1.add(new Cliente(digitardatos.getIdentidad(), digitardatos.getPrimerNombre(), digitardatos.getPrimerApellido(), digitardatos.getCodigoCliente()));
+        EscritorCvsClientes.writeCsvFile("ClientesLista.Csv", clientes1, true);
         return clientes1;
     }
 
-    public void eliminarCliente(){
-       LectorTeclado lt = new LectorTeclado();
+    public void eliminarCliente() {
         clientes1 = LectorCvsCliente.readCsvFile("ClientesLista.Csv");
+        int i = 0;
+        for (Cliente cliente : clientes1) {
+            i++;
+            if (clientes1.size() == i) {
+                clientes1.remove(clientes1.size() - 1);
+                EscritorCvsClientes.writeCsvFile("ClientesLista.Csv", clientes1, false);
+                clientes1.add(new Cliente("\t" , "\t", "\t", "\t"));
+            }
+        }
     }
 
-    public void verClientes(){
+    public void verClientes() {
         clientes1 = LectorCvsCliente.readCsvFile("ClientesLista.Csv");
         for (Cliente cliente : clientes1) {
             System.out.println(cliente.getCodigoCliente() + "\t" + cliente.getIdentidad() + "\t" + cliente.getPrimerNombre() + "\t"

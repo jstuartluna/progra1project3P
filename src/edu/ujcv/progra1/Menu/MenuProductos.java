@@ -37,7 +37,7 @@ public class MenuProductos {
                 System.out.println("\n");
                 break;
         }
-        return verOpcionesP();
+        return opcion;
     }
 
     public ArrayList<Productos> agregarProducto(){
@@ -48,15 +48,24 @@ public class MenuProductos {
         digitardatos.setDescripcionProducto(lt.leerString("Ingrese uns Descripcion del Producto"));
         digitardatos.setCantidadProducto(lt.leerString("Ingrese la cantidad disponible de producto"));
         productos1.add(new Productos(digitardatos.getCodigoProducto(),digitardatos.getDescripcionProducto(),digitardatos.getCantidadProducto(),digitardatos.getPrecioProducto()));
-        EscritorCvsProductos.writeCsvFile("Productos.Csv",productos1);
+        EscritorCvsProductos.writeCsvFile("Productos.Csv",productos1,true);
         return productos1;
     }
 
     public void eliminarProducto(){
-        LectorTeclado lt = new LectorTeclado();
         productos1 = LectorCvsProductos.readCsvFile("Productos.Csv");
+        int i = 0;
+        for (Productos producto:productos1) {
+            i++;
+            if(productos1.size()== i){
+                productos1.remove(productos1.size()-1);
+                EscritorCvsProductos.writeCsvFile("Productos.Csv",productos1,false);
+                productos1.add(new Productos());
+            }
+        }
+        if(productos1.size() < i)
+            System.out.println("No existe ese producto");
     }
-
     public void verProductos(){
         productos1 = LectorCvsProductos.readCsvFile("Productos.csv");
         for (Productos productos : productos1) {

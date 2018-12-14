@@ -15,20 +15,20 @@ public class EscritorCvsProductos {
     //CSV file header
     private static final String FILE_HEADER = "codigoProducto ,cantidadProducto,precioProducto , descripcionProducto";
 
-    public static void writeCsvFile(String fileName, ArrayList<Productos> productos) {
+    public static void writeCsvFile(String fileName, ArrayList<Productos> productos, boolean append) {
 
 
 
         FileWriter fileWriter = null;
 
         try {
-            fileWriter = new FileWriter(fileName,false);
+            fileWriter = new FileWriter(fileName,append);
 
             //Write the CSV file header
-            fileWriter.append(FILE_HEADER);
+            //fileWriter.append(FILE_HEADER);
 
             //Add a new line separator after the header
-            fileWriter.append(NEW_LINE_SEPARATOR);
+            //fileWriter.append(NEW_LINE_SEPARATOR);
 
             //Write a new student object list to the CSV file
             for (Productos producto : productos) {
