@@ -7,11 +7,15 @@ public class Cliente {
     private String codigoCliente;
     private String identidad;
 
-    public Cliente( String identidad, String primerNombre, String primerApellido, String codigoCliente) {
+    public Cliente(String identidad, String primerNombre, String primerApellido, String codigoCliente) {
         this.primerNombre = primerNombre;
         this.primerApellido = primerApellido;
         this.codigoCliente = codigoCliente;
         this.identidad = identidad;
+    }
+
+    public Cliente(){
+
     }
 
     public String getPrimerNombre() {

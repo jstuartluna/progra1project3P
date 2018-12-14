@@ -13,35 +13,47 @@ public class Productos {
        this.precioProducto = precioProducto;
     }
 
+    public Productos(){
+
+    }
+
     public String getCantidadProducto(){
+
         return cantidadProducto;
     }
 
     public void setCantidadProducto(String cantidadProducto){
+
         this.cantidadProducto = cantidadProducto;
     }
 
     public String getDescripcionProducto(){
+
         return  descripcionProducto;
     }
 
-    public void setDescripcionProducto(){
+    public void setDescripcionProducto(String descripcionProducto){
+
         this.descripcionProducto = descripcionProducto;
     }
 
     public String getCodigoProducto(){
+
         return codigoProducto;
     }
 
     public void setCodigoProducto(String codigoProducto) {
+
         this.codigoProducto = codigoProducto;
     }
 
     public String getPrecioProducto() {
+
         return precioProducto;
     }
 
     public void setPrecioProducto(String precioProducto) {
+
         this.precioProducto = precioProducto;
     }
 }

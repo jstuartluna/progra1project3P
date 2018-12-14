@@ -38,4 +38,14 @@ public class LectorTeclado {
             return retval;
         }
 
+         public String leerString(String mensaje) {
+            String retval = "";
+            System.out.println(mensaje);
+            while(!mSc.hasNext()){
+                mSc.nextLine();
+            }
+            retval = mSc.next();
+            mSc.nextLine();
+            return retval;
+         }
     }

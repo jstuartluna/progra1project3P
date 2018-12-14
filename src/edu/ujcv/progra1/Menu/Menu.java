@@ -21,7 +21,6 @@ public class Menu {
         }
     }
 
-
     public void leerOpcionLuegoProcessar(){
         LectorTeclado lt = new LectorTeclado();
         int opcion =0;
