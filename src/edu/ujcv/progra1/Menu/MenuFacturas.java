@@ -1,6 +1,5 @@
 package edu.ujcv.progra1.Menu;
 
-
 import edu.ujcv.progra1.Menu.MenuProductos;
 import edu.ujcv.progra1.Menu.MenuClientes;
 import edu.ujcv.progra1.Menu.MenuProductos2;
@@ -19,5 +18,5 @@ public class MenuFacturas {
     double ISV = 0;
     public int opcion2;
 
-    
+
 }

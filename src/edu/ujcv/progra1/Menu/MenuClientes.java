@@ -31,7 +31,7 @@ public class MenuClientes {
                 break;
             case 3:
                 System.out.println("\n La lista de cliente es:");
-                System.out.println("Identidad \t \t Primer nombre \t \t Primer Apellido \t \t Codigo");
+                System.out.println("Codigo Cliente \t Identidad\t Primer nombre \t Primer Apellido");
                 verClientes();
                 System.out.println("\n");
                 break;
@@ -58,8 +58,8 @@ public class MenuClientes {
     public void verClientes(){
         clientes1 = LectorCvsCliente.readCsvFile("ClientesLista.Csv");
         for (Cliente cliente : clientes1) {
-            System.out.println(cliente.getIdentidad() + "\t \t" + cliente.getPrimerNombre() + "\t \t \t \t"
-                    + cliente.getPrimerApellido() + "\t \t \t \t" + cliente.getCodigoCliente());
+            System.out.println(cliente.getCodigoCliente() + "\t" + cliente.getIdentidad() + "\t" + cliente.getPrimerNombre() + "\t"
+                    + cliente.getPrimerApellido() + "\t");
         }
     }
 

@@ -58,8 +58,8 @@ public class MenuProductos {
     public void verProductos(){
         productos1 = LectorCvsProductos.readCsvFile("Productos.csv");
         for (Productos productos : productos1) {
-            System.out.println(productos.getCodigoProducto() + "\t \t" + productos.getDescripcionProducto() + "\t \t \t \t"
-                    + productos.getPrecioProducto() + "\t \t \t \t" + productos.getCantidadProducto());
+            System.out.println(productos.getCodigoProducto() + "\t" + productos.getDescripcionProducto() + "\t"
+                    + productos.getPrecioProducto() + "\t" + productos.getCantidadProducto());
         }
     }
 
