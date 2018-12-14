@@ -2,14 +2,14 @@ package edu.ujcv.progra1.edu.ujcv.progra1.models;
 
 public class Reportes {
     private String nombre;
-    private String rtn;
-    private String cantidadProductos;
+    private String RTN;
+    private String Productos;
     private String total;
 
-    public Reportes(String nombre, String rtn, String cantidadProductos, String total){
+    public Reportes(String nombre, String RTN, String Productos, String total){
         this.nombre = nombre;
-        this.rtn = rtn;
-        this.cantidadProductos = cantidadProductos;
+        this.RTN = RTN;
+        this.Productos = Productos;
         this.total = total;
     }
 
@@ -27,17 +27,6 @@ public class Reportes {
         this.nombre = nombre;
     }
 
-    public String getRtn() {
-
-        return rtn;
-    }
-
-    public void setRtn(String rtn) {
-
-        this.rtn = rtn;
-    }
-
-
     public String getTotal() {
 
         return total;
@@ -48,13 +37,24 @@ public class Reportes {
         this.total = total;
     }
 
-    public String getCantidadProductos() {
+    public String getProductos() {
 
-        return cantidadProductos;
+        return Productos;
     }
 
-    public void setCantidadProductos(String cantidadProductos) {
+    public void setProductos(String Productos) {
 
-        this.cantidadProductos = cantidadProductos;
+        this.Productos = Productos;
     }
+
+    public String getRTN(){
+
+        return RTN;
+    }
+
+    public void setRTN (String RTN){
+
+        this.RTN = RTN;
+    }
+
 }
